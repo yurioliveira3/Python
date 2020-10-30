@@ -18,6 +18,9 @@ class Retangulo:
     def area(self):
         return (self.L * self.A);
 
+    def print(self):
+        print("Base:", self.L, "Altura:", self.A)
+
 class Circulo: 
     #Construtor de Veiculo
     def __init__(self, R):
@@ -26,21 +29,29 @@ class Circulo:
     def area(self):
         return ((self.R**2 * math.pi)/2);
 
+    def print(self):
+        print("Raio:", self.R)
+
 if __name__ == "__main__":
-    #Cria o objeto
-    R = Retangulo(4,5);
-    C = Circulo(2);
-
-    #Chama o metodo que calcula a area
-    # print(R.area());
-    # print(C.area());
-
+    
     randomlist = []
 
     for i in range(0,10):
+        #Cria os objetos
         tmpR = Retangulo(random.randint(1,30),random.randint(1,30)); 
         tmpC = Circulo(random.randint(1,30));
+        #Adiciona objetos
         randomlist.append(tmpR)
         randomlist.append(tmpC)
+
+    sum = 0
     
-  
+    for i in range(len(randomlist)):  
+        randomlist[i].print()
+        sum += randomlist[i].area()
+
+    print("O somatório das áreas é: {:.3f}".format(sum));
+    
+    
+
+    
