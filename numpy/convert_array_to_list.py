@@ -3,6 +3,8 @@
 # a primeira contendo os maiores elementos de cada coluna
 # segunda contendo os maiores elementos de cada linha.
 
+import numpy as np
+
 def convert_arr(array):
     list_ = array.tolist() #simple convert
     list1, list2 = [], []
@@ -23,7 +25,6 @@ def convert_arr(array):
 
     return list1,list2
 
-import numpy as np
 
 if __name__ == "__main__":
 
