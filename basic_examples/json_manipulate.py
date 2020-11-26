@@ -2,6 +2,7 @@
 #!/usr/bin/env python3
 
 import json # to manipulate json file
+import os
 
 # load json file, return list 
 def load_historic(file_name):
